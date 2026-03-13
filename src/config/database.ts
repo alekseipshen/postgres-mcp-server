@@ -12,6 +12,7 @@ resourceBaseUrl.password = ""; // Clear password for constructing resource URIs
 
 export const pool = new pg.Pool({
     connectionString: databaseUrl,
+    ssl: { rejectUnauthorized: false },
 });
 
 export const SCHEMA_PATH = "schema";
